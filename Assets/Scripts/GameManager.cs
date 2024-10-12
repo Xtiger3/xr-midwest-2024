@@ -42,8 +42,9 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
 
-        for (char letter = 'A'; letter <= 'Z'; letter++)
+        for (char letter = 'A'; letter <= 'Y'; letter++)
         {
+            if (letter == 'J') continue;
             gameWords.Add(letter);
         }
     }
@@ -116,7 +117,7 @@ public class GameManager : MonoBehaviour
         hint.SetActive(false);
         currentIndex = Random.Range(0, gameWords.Count);
         currentLetterModel = Instantiate(letterModel[currentIndex], Camera.main.transform.position + offset, Quaternion.identity);
-        currentLetterModel.transform.localScale = 5 * currentLetterModel.transform.localScale;
+        currentLetterModel.transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
         currentWord = gameWords[currentIndex];
         StartCoroutine(ShowHint());
     }
