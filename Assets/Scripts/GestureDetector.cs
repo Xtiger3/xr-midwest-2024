@@ -109,7 +109,8 @@ public class GestureDetector : MonoBehaviour
 
                 // after that i will invoke what put in the Event if is present
                 Debug.Log("Gesture Recognized: " + currentGesture.name);
-                currentGesture.onRecognized?.Invoke();
+                GameManager.Instance.GestureRecognized(currentGesture.name);
+                //currentGesture.onRecognized?.Invoke();
             }
             // if the gesture we done is no more recognized
             else
