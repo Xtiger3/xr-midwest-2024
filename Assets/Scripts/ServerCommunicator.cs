@@ -1,6 +1,9 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using SocketIOClient;
+using SocketIOClient.Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 public class ServerCommunicator : MonoBehaviour
 {
@@ -19,73 +22,90 @@ public class ServerCommunicator : MonoBehaviour
         var uri = new System.Uri(serverUrl);
         socket = new SocketIOUnity(uri, new SocketIOOptions
         {
-            EIO = 4,  // Engine.IO protocol version 4
+            Query = new Dictionary<string, string>
+                {
+                    {"token", "UNITY" }
+                }
+            ,
             Transport = SocketIOClient.Transport.TransportProtocol.WebSocket
         });
 
-        // Handle the connection event
-        socket.On("connect", (response) =>
-        {
-            Debug.Log("Connected to the server");
-        });
+        socket.JsonSerializer = new NewtonsoftJsonSerializer();
 
-        // Listen for custom events from the server
-        socket.On("assigned", (response) =>
-        {
-            role = response.GetValue<string>(0);
-            currentHP = response.GetValue<int>(1);
-
-            Debug.Log("Assigned role: " + role);
-            Debug.Log("Assigned HP: " + currentHP);
-        });
-
-        socket.On("updateHP", (response) =>
-        {
-            currentHP = response.GetValue<int>();
-            Debug.Log("HP updated: " + currentHP);
-        });
-
-        socket.On("gameStart", (response) =>
-        {
-            ongoingGame = true;
-            Debug.Log("Game started");
-        });
-
-        // Time heartbeat
-        socket.On("timeUpdate", (response) =>
-        {
-            timeLeft = response.GetValue<int>();
-            Debug.Log("Time left: " + timeLeft);
-        });
-
-        // Listen for error events
-        socket.On("error", (response) =>
-        {
-            string error = response.GetValue<string>();
-            Debug.LogError("Error: " + error);
-        });
-
-        // Handle disconnection
-        socket.On("disconnect", (response) =>
-        {
-            Debug.Log("Disconnected from the server");
-        });
-
-        // Listen for game finished event
-        socket.On("gameFinished", (response) =>
-        {
-            result = response.GetValue<string>();
-            ongoingGame = false;
-            Debug.Log("Game finished: " + result);
-        });
-
-        // Establish the connection to the server
         socket.Connect();
+
+        socket.OnAnyInUnityThread((name, response) =>
+        {
+
+            Debug.Log($"Received event '{name}' with data: {response.ToString()}");
+
+            if (name == "connect")
+            {
+                Debug.Log("Connected to the server1");
+            }
+
+            if(name == "assigned")
+            {
+                var assignment = response.GetValue<PlayerAssignment>();
+
+                // Set the role and currentHP based on the deserialized data
+                role = assignment.Player;
+                currentHP = assignment.HP;
+
+                Debug.Log("Assigned role: " + role);
+                Debug.Log("Assigned HP: " + currentHP);
+            }
+
+            if(name == "updateHP")
+            {
+                var hpUpdates = response.GetValue<HPUpdateData>();
+                currentHP = hpUpdates.HP;
+                Debug.Log("HP updated: " + currentHP);
+            }
+
+            if(name == "gameStart")
+            {
+                ongoingGame = true;
+                Debug.Log("Game started");
+            }
+
+            if(name == "timeUpdate")
+            {
+                var timeUpdates = response.GetValue<TimeUpdateData>();
+                    timeLeft = timeUpdates.TimeLeft;
+                    Debug.Log("Time left: " + timeLeft);
+            }
+
+            if(name == "error")
+            {
+                string error = response.GetValue<string>();
+                Debug.LogError("Error: " + error);
+            }
+
+            if(name == "disconnect")
+            {
+                Debug.Log("Disconnected from the server");
+            }
+
+            if(name == "gameFinished")
+            {
+                var gameResults = response.GetValue<GameFinishedData>();
+
+                    result = gameResults.Result;
+                    ongoingGame = false;
+
+                    Debug.Log("Game finished: " + result);
+             }
+        });
+
     }
 
     // Send the "correctGesture" event to the server
     public void SendCorrectGesture()
     {
+        Debug.Log("SendGesture");
+        Debug.Log(socket != null);
+        Debug.Log(socket.Connected);
         if (socket != null && socket.Connected)
         {
             socket.Emit("correctGesture");
@@ -127,4 +147,26 @@ public class ServerCommunicator : MonoBehaviour
     {
         Disconnect();
     }
+}
+
+
+class PlayerAssignment
+{
+    public string Player { get; set; }
+    public int HP { get; set; }
+}
+
+class TimeUpdateData
+{
+    public int TimeLeft { get; set; }
+}
+
+class GameFinishedData
+{
+    public string Result { get; set; } 
+}
+
+class HPUpdateData
+{
+    public int HP { get; set; }
 }
