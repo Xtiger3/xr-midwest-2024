@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
+using UnityEngine.UI;
 
 public class NetworkPlayer : NetworkBehaviour
 {
     //public Transform root;
     public Transform head;
+    public Slider slider;
 
     public override void OnNetworkSpawn()
     {
@@ -29,7 +31,7 @@ public class NetworkPlayer : NetworkBehaviour
             head.position = VRRigReferences.Singleton.head.position;
             head.rotation = VRRigReferences.Singleton.head.rotation;
 
-
+            slider.value = GameManagerMultiplayer.Instance.health;
         }
     }
 }

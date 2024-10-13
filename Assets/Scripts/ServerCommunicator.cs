@@ -60,6 +60,7 @@ public class ServerCommunicator : MonoBehaviour
             {
                 var hpUpdates = response.GetValue<HPUpdateData>();
                 currentHP = hpUpdates.HP;
+                GameManagerMultiplayer.Instance.health = currentHP;
                 Debug.Log("HP updated: " + currentHP);
             }
 
@@ -67,13 +68,16 @@ public class ServerCommunicator : MonoBehaviour
             {
                 ongoingGame = true;
                 Debug.Log("Game started");
+                GameManagerMultiplayer.Instance.StartGame();
+
             }
 
             if(name == "timeUpdate")
             {
                 var timeUpdates = response.GetValue<TimeUpdateData>();
-                    timeLeft = timeUpdates.TimeLeft;
-                    Debug.Log("Time left: " + timeLeft);
+                timeLeft = timeUpdates.TimeLeft;
+                GameManagerMultiplayer.Instance.UpdateTimer(timeLeft);
+                Debug.Log("Time left: " + timeLeft);
             }
 
             if(name == "error")
@@ -91,10 +95,10 @@ public class ServerCommunicator : MonoBehaviour
             {
                 var gameResults = response.GetValue<GameFinishedData>();
 
-                    result = gameResults.Result;
-                    ongoingGame = false;
-
-                    Debug.Log("Game finished: " + result);
+                result = gameResults.Result;
+                ongoingGame = false;
+                GameManagerMultiplayer.Instance.ShowScore(result);
+                Debug.Log("Game finished: " + result);
              }
         });
 
