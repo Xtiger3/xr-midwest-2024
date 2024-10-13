@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,10 +10,13 @@ public class GameManager : MonoBehaviour
 
     private List<char> gameWords = new List<char>();
     public List<GameObject> letterModel = new List<GameObject>();
+    public List<Sprite> letterHint = new List<Sprite>();
     private char currentWord;
     private int currentIndex;
     private GameObject currentLetterModel;
-    public GameObject hint;
+    //public GameObject hint;
+
+    public GameObject hintCanvas;
     public Vector3 offset;
 
     private float timer = 60f;
@@ -23,13 +27,12 @@ public class GameManager : MonoBehaviour
 
     public GameObject scorePanel;
     public TextMeshProUGUI scoreText;
-    //public TextMeshProUGUI correctCountText;
 
     public TextMeshProUGUI countdownText;
-    //public TextMeshProUGUI gameScoreText;
-    //public GameObject instructions;
 
     private bool timerRunning = false;
+
+    public AudioSource audioSource; 
 
     private void Awake()
     {
@@ -56,9 +59,14 @@ public class GameManager : MonoBehaviour
             timerText.text = Mathf.FloorToInt(timer).ToString();
             timer -= Time.deltaTime;
         }
+        if (timer < 10 && timerRunning)
+        {
+            audioSource.pitch = 1.5f;
+        }
         if (timer <= 0)
         {
             ShowScore();
+            audioSource.Stop();
         }
     }
 
@@ -69,13 +77,11 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        //instructions.SetActive(false);
         StartCoroutine(Init());
     }
 
     IEnumerator Init()
     {
-        //yield return new WaitForSeconds(1f);
         countdownText.gameObject.SetActive(true);
         countdownText.text = "3";
         yield return new WaitForSeconds(1f);
@@ -86,7 +92,6 @@ public class GameManager : MonoBehaviour
         countdownText.text = "START";
         yield return new WaitForSeconds(1f);
         countdownText.gameObject.SetActive(false);
-        //instructions.SetActive(false);
 
         timer = timeLimit;
         timerRunning = true;
@@ -107,13 +112,12 @@ public class GameManager : MonoBehaviour
     public void AddCountCorrect()
     {
         countCorrect++;
-        //gameScoreText.text = countCorrect.ToString();
     }
 
     public void NextRound()
     {
         StopAllCoroutines();
-        hint.SetActive(false);
+        //hintCanvas.SetActive(false);
         currentIndex = Random.Range(0, gameWords.Count);
         currentLetterModel = Instantiate(letterModel[currentIndex], Camera.main.transform.position + offset, Quaternion.identity);
         currentLetterModel.transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
@@ -124,12 +128,8 @@ public class GameManager : MonoBehaviour
     public IEnumerator ShowHint()
     {
         yield return new WaitForSeconds(5f);
-        hint.SetActive(true);
-    }
-
-    public void ReplayGame()
-    {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameObject hintObject = Instantiate(hintCanvas, currentLetterModel.transform);
+        hintObject.transform.GetChild(0).GetComponent<Image>().sprite = letterHint[currentIndex];
     }
 
     public void ShowScore()
@@ -137,7 +137,6 @@ public class GameManager : MonoBehaviour
         scorePanel.SetActive(true);
         int score = (countCorrect * 10);
         scoreText.text = "You scored " + score.ToString() + " points";
-        //correctCountText.text = "CORRECT: " + countCorrect.ToString();
     }
 
    

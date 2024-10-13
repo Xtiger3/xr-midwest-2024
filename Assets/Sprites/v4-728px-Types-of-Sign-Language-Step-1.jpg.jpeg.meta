@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,595 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 428
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817feb2c700774b6a82c5cbd59243470
+      internalID: 756194800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_1
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 428
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7726c6283e9ba40589874a3bda10298a
+      internalID: 1931242301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_2
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 428
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509bee3239a9742e8b64773a0d5a7356
+      internalID: -1674132294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 428
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44dc65c02ca0b49d7beff2a67519354d
+      internalID: -703282910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_4
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 428
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f2b637164684ca4ac59adb45c6c89a
+      internalID: 1088491685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_5
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 428
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5128e2fe95570437ab976da5b5728833
+      internalID: -1245510351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_6
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 428
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa498977559f45c8bc8eb90f600a82f
+      internalID: -274688945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_7
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 297
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4874f731d4843dbb4b59ce77ebecb4
+      internalID: 908489113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_8
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 297
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1889c06cf9dc5473794e3c37eb74940d
+      internalID: 251899111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_9
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 297
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069400dd84c5047b0afb252879be1c7a
+      internalID: 991103903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 297
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8c4a88811574c14b40f0baacd1b12f
+      internalID: 1887536518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_11
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 297
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8466364f8ad48259cfe61572ca4072
+      internalID: -588432871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_12
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 297
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fda7dc363e5844518b3ae04b0cdcebf
+      internalID: 165139061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_13
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 297
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a31311198e9244e0be1a25ea493723e
+      internalID: 381326783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_14
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 166
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d2eacc5c3e84e0d942f37890c7b56d
+      internalID: -1801930317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_15
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 166
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd342337bb5b451fb81744e5f13790a
+      internalID: -1033591202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_16
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 166
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d494eb5131d54aadbe48918a6f0296c
+      internalID: 1574855660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 166
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48bc22f33cca347479d3c225f928fad4
+      internalID: 1293407219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_18
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 166
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cc40a6a609548bc9f1ac32b54b3156
+      internalID: -1795112802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_19
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 166
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f2fd1c7db0f4552809cade6c98680b
+      internalID: 410583471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_20
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 166
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba2f9849169e4408183aaf9730250387
+      internalID: 1246019464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_21
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 35
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18a37bb0eb5d45059e5b078023ad33c
+      internalID: 1623221727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_22
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 35
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3d0ec309ef646f3a6dbc3fad1acefb
+      internalID: -671315736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_23
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 35
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd37a2fbc740414e9f60c448e7ced92
+      internalID: -1336583361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_24
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 35
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555cca4afbf9a46f19d1c28fdd1b0c2a
+      internalID: 1010089734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_25
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 35
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f139f878fd50b48b2a123aaf7d00f582
+      internalID: -655887311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_26
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 35
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445d041664d044c7096df9ab7baafc04
+      internalID: 1822897381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: v4-728px-Types-of-Sign-Language-Step-1.jpg_27
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 35
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee7e6a6bfc1d45b7a1d11e3c73a8ed1
+      internalID: -772981304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +714,35 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_0: 756194800
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_1: 1931242301
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_10: 1887536518
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_11: -588432871
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_12: 165139061
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_13: 381326783
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_14: -1801930317
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_15: -1033591202
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_16: 1574855660
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_17: 1293407219
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_18: -1795112802
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_19: 410583471
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_2: -1674132294
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_20: 1246019464
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_21: 1623221727
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_22: -671315736
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_23: -1336583361
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_24: 1010089734
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_25: -655887311
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_26: 1822897381
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_27: -772981304
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_3: -703282910
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_4: 1088491685
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_5: -1245510351
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_6: -274688945
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_7: 908489113
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_8: 251899111
+      v4-728px-Types-of-Sign-Language-Step-1.jpg_9: 991103903
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
