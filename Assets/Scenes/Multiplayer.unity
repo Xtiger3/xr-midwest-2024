@@ -444,9 +444,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81cf57e40fd354e74b35af79e5975596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serverUrl: 
-  server: {fileID: 0}
-  startPanel: {fileID: 0}
+  serverUrl: 35.2.90.199
+  server: {fileID: 1463046040}
+  startPanel: {fileID: 730176169}
 --- !u!1 &110344416
 GameObject:
   m_ObjectHideFlags: 0
@@ -3530,6 +3530,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1463046039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1463046041}
+  - component: {fileID: 1463046040}
+  m_Layer: 0
+  m_Name: Server Communicator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1463046040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463046039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a11fffe6b8419c40a9f89965563a1d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHP: 0
+  ongoingGame: 0
+  timeLeft: 0
+  role: 
+  result: 
+--- !u!4 &1463046041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463046039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.375732, y: 23.761993, z: 8.394104}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1574371236
 GameObject:
   m_ObjectHideFlags: 0
@@ -4469,7 +4518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e10c7534d54428cac75a5b30501bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  server: {fileID: 0}
+  server: {fileID: 1463046040}
   letterModel: []
   letterHint: []
   hintCanvas: {fileID: 1341295730153704524, guid: ef62410631b154f5eb9eb34adb238fc8, type: 3}
