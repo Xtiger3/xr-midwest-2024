@@ -15,4 +15,18 @@ public class NetworkConnect : MonoBehaviour
     {
         NetworkManager.Singleton.StartClient();
     }
+
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Create();
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Join();
+        }
+    }
 }
