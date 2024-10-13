@@ -43,6 +43,11 @@ public class GestureDetector : MonoBehaviour
     [Header("Not Recognized Event")]
     public UnityEvent notRecognize;
 
+    // Tracks how long user holds the correct gesture
+    public int holdTime = 10;
+    private int count = 0;
+    private Gesture lastGesture;
+
     void Start()
     {
         // When the Oculus hand had his time to initialize hand, with a simple coroutine i start a delay of
@@ -50,6 +55,7 @@ public class GestureDetector : MonoBehaviour
         //StartCoroutine(DelayRoutine(2.5f, Initialize));
         StartCoroutine(GetFingerBones());
         hasStarted = true;
+        lastGesture = new Gesture();
     }
 
     IEnumerator GetFingerBones()
@@ -109,7 +115,21 @@ public class GestureDetector : MonoBehaviour
 
                 // after that i will invoke what put in the Event if is present
                 Debug.Log("Gesture Recognized: " + currentGesture.name);
-                GameManager.Instance.GestureRecognized(currentGesture.name);
+                if (currentGesture.name == lastGesture.name)
+                {
+                    count++;
+                }
+                else
+                {
+                    count = 0;
+                }
+
+                if (count > holdTime)
+                {
+                    GameManager.Instance.GestureRecognized(currentGesture.name);
+                }
+
+                lastGesture = currentGesture;
                 //currentGesture.onRecognized?.Invoke();
             }
             // if the gesture we done is no more recognized
