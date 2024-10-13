@@ -6,7 +6,7 @@ using Unity.Netcode;
 public class NetworkPlayer : NetworkBehaviour
 {
     public Transform root;
-    public Transform head;
+    //public Transform head;
 
     public override void OnNetworkSpawn()
     {
@@ -26,8 +26,8 @@ public class NetworkPlayer : NetworkBehaviour
             root.position = VRRigReferences.Singleton.root.position;
             root.rotation = VRRigReferences.Singleton.root.rotation;
 
-            head.position = VRRigReferences.Singleton.head.position;
-            head.rotation = VRRigReferences.Singleton.head.rotation;
+            //head.position = VRRigReferences.Singleton.head.position;
+            //head.rotation = VRRigReferences.Singleton.head.rotation;
 
 
         }

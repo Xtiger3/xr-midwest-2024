@@ -7,7 +7,7 @@ public class VRRigReferences : MonoBehaviour
     public static VRRigReferences Singleton;
 
     public Transform root;
-    public Transform head;
+    //public Transform head;
 
     private void Awake()
     {

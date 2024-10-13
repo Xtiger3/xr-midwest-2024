@@ -19,14 +19,19 @@ public class NetworkConnect : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             Create();
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             Join();
         }
+    }
+
+    private void Start()
+    {
+
     }
 }
