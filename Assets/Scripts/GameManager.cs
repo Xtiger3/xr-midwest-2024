@@ -120,7 +120,8 @@ public class GameManager : MonoBehaviour
         //hintCanvas.SetActive(false);
         currentIndex = Random.Range(0, gameWords.Count);
         currentLetterModel = Instantiate(letterModel[currentIndex], Camera.main.transform.position + offset, Quaternion.identity);
-        currentLetterModel.transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
+        currentLetterModel.transform.localScale = new Vector3(-0.75f, 0.75f, 0.75f);
+        currentLetterModel.transform.position += new Vector3(0, -.5f, 0);
         currentWord = gameWords[currentIndex];
         StartCoroutine(ShowHint());
     }
@@ -130,7 +131,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(5f);
         GameObject hintObject = Instantiate(hintCanvas, currentLetterModel.transform);
         hintObject.transform.GetChild(0).GetComponent<Image>().sprite = letterHint[currentIndex];
-        hintObject.transform.position += new Vector3(.5f, 0, 0);
+        hintObject.transform.position += new Vector3(.6f, -.25f, 0);
     }
 
     public void ShowScore()
