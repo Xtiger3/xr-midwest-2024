@@ -130,6 +130,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(5f);
         GameObject hintObject = Instantiate(hintCanvas, currentLetterModel.transform);
         hintObject.transform.GetChild(0).GetComponent<Image>().sprite = letterHint[currentIndex];
+        hintObject.transform.position += new Vector3(.5f, 0, 0);
     }
 
     public void ShowScore()
