@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     private float timer = 60f;
     public float timeLimit = 60f;
     public TextMeshProUGUI timerText;
+    public GameObject timerBox;
 
     private int countCorrect = 0;
 
@@ -137,6 +138,10 @@ public class GameManager : MonoBehaviour
     public void ShowScore()
     {
         scorePanel.SetActive(true);
+        //timerText.gameObject.SetActive(false);
+        //Destroy(currentLetterModel);
+        timerBox.SetActive(false);
+        currentLetterModel.SetActive(false);
         int score = (countCorrect * 10);
         scoreText.text = "You scored " + score.ToString() + " points";
     }

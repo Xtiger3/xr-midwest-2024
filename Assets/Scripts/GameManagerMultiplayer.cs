@@ -153,5 +153,7 @@ public class GameManagerMultiplayer : MonoBehaviour
         timerRunning = false;
         endPanel.SetActive(true);
         scoreText.text = res;
+        gamePanel.SetActive(false);
+        currentLetterModel.SetActive(false);
     }
 }
