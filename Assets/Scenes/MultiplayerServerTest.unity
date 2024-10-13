@@ -710,11 +710,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7192818547691413832, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
   m_PrefabInstance: {fileID: 393785314}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &451640518 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7192818547691413838, guid: f39a9d103c4129b42a53567f6cd8356a, type: 3}
-  m_PrefabInstance: {fileID: 393785314}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &451640519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,7 +722,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68e19d42e30149f089656221d38ce0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  root: {fileID: 451640518}
   head: {fileID: 451640517}
 --- !u!1001 &479418031
 PrefabInstance:
@@ -1352,7 +1346,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: http://172.20.10.4:8000
+          m_StringArgument: http://172.20.10.4:8080
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &910835058
