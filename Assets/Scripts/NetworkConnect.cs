@@ -13,14 +13,14 @@ public class NetworkConnect : MonoBehaviour
     public void Create()
     {
         NetworkManager.Singleton.StartHost();
-        server.Connect(serverUrl);
+        server.Connect("http://" + serverUrl + ":8080");
         startPanel.SetActive(false);
     }
 
     public void Join()
     {
         NetworkManager.Singleton.StartClient();
-        server.Connect(serverUrl);
+        server.Connect("http://" + serverUrl + ":8080");
         startPanel.SetActive(false);
     }
 
