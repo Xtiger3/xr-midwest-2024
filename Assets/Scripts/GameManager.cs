@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public List<char> gameWords = new List<char>();
+    private List<char> gameWords = new List<char>();
     public List<GameObject> letterModel = new List<GameObject>();
     private char currentWord;
     private int currentIndex;
@@ -23,11 +23,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject scorePanel;
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI correctCountText;
+    //public TextMeshProUGUI correctCountText;
 
     public TextMeshProUGUI countdownText;
-    public TextMeshProUGUI gameScoreText;
-    public GameObject instructions;
+    //public TextMeshProUGUI gameScoreText;
+    //public GameObject instructions;
 
     private bool timerRunning = false;
 
@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        instructions.SetActive(false);
+        //instructions.SetActive(false);
         StartCoroutine(Init());
     }
 
@@ -107,8 +107,7 @@ public class GameManager : MonoBehaviour
     public void AddCountCorrect()
     {
         countCorrect++;
-        int score = (countCorrect * 10);
-        gameScoreText.text = score.ToString();
+        //gameScoreText.text = countCorrect.ToString();
     }
 
     public void NextRound()
@@ -137,8 +136,8 @@ public class GameManager : MonoBehaviour
     {
         scorePanel.SetActive(true);
         int score = (countCorrect * 10);
-        scoreText.text = score.ToString();
-        correctCountText.text = "CORRECT: " + countCorrect.ToString();
+        scoreText.text = "You scored " + score.ToString() + " points";
+        //correctCountText.text = "CORRECT: " + countCorrect.ToString();
     }
 
    
