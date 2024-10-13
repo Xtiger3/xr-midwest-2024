@@ -16,10 +16,10 @@ public class GameManagerMultiplayer : MonoBehaviour
     private int currentIndex;
     private GameObject currentLetterModel;
 
-    public GameObject hintCanvas;
+    public Image hintCanvas;
     public Vector3 offset;
 
-    private float timer = 60f;
+    private float timer = 65f;
     private bool timerRunning = false;
     private bool gameStarted = false;
 
@@ -72,6 +72,8 @@ public class GameManagerMultiplayer : MonoBehaviour
             //ShowScore();
             audioSource.Stop();
         }
+
+        //currentLetterModel.transform.position = Camera.main.transform.position + offset;
     }
 
     private void Start()
@@ -101,14 +103,14 @@ public class GameManagerMultiplayer : MonoBehaviour
         {
             countdownText.gameObject.SetActive(true);
             timerGameObject.SetActive(false);
-            gamePanel.SetActive(false);
+            gamePanel.SetActive(true);
             if (timeLeft > 61)
             {
-                countdownText.text = "START";
+                countdownText.text = (timeLeft - 61).ToString();
             }
             else
             {
-                countdownText.text = (timeLeft - 61).ToString();
+                countdownText.text = "START";
             }
         }
         else
@@ -120,7 +122,6 @@ public class GameManagerMultiplayer : MonoBehaviour
             }
             countdownText.gameObject.SetActive(false);
             timerGameObject.SetActive(true);
-            gamePanel.SetActive(true);
             timerText.text = timeLeft.ToString();
             timer = timeLeft;
         }
@@ -130,6 +131,7 @@ public class GameManagerMultiplayer : MonoBehaviour
     {
         StopAllCoroutines();
         //hintCanvas.SetActive(false);
+        hintCanvas.gameObject.SetActive(false);
         currentIndex = Random.Range(0, gameWords.Count);
         currentLetterModel = Instantiate(letterModel[currentIndex], Camera.main.transform.position + offset, Quaternion.identity);
         currentLetterModel.transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
@@ -140,14 +142,16 @@ public class GameManagerMultiplayer : MonoBehaviour
     public IEnumerator ShowHint()
     {
         yield return new WaitForSeconds(5f);
-        GameObject hintObject = Instantiate(hintCanvas, currentLetterModel.transform);
-        hintObject.transform.GetChild(0).GetComponent<Image>().sprite = letterHint[currentIndex];
+        //GameObject hintObject = Instantiate(hintCanvas, currentLetterModel.transform);
+        hintCanvas.gameObject.SetActive(true);
+        hintCanvas.sprite = letterHint[currentIndex];
+        //hintObject.transform.position += new Vector3(.6f, -.25f, 0);
     }
 
     public void ShowScore(string res)
     {
         timerRunning = false;
         endPanel.SetActive(true);
-        scoreText.text = "You are the " + res;
+        scoreText.text = res;
     }
 }

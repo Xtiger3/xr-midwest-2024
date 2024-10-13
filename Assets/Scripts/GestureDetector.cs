@@ -48,6 +48,8 @@ public class GestureDetector : MonoBehaviour
     private int count = 0;
     private Gesture lastGesture;
 
+    public bool isMultiplayer = false;
+
     void Start()
     {
         // When the Oculus hand had his time to initialize hand, with a simple coroutine i start a delay of
@@ -126,7 +128,8 @@ public class GestureDetector : MonoBehaviour
 
                 if (count > holdTime)
                 {
-                    GameManager.Instance.GestureRecognized(currentGesture.name);
+                    if (isMultiplayer) GameManagerMultiplayer.Instance.GestureRecognized(currentGesture.name);
+                    else GameManager.Instance.GestureRecognized(currentGesture.name);
                 }
 
                 lastGesture = currentGesture;
